@@ -24,7 +24,7 @@ module Rulers
       text = self.send(action)
       if get_response
         st, hd, rs = get_response.to_a
-        [st, hd, [rs].flatten]
+        [st, hd, [rs.body].flatten]
       else
         [200, {'Content-Type' => 'text/html'},
           [text].flatten]
